@@ -44,8 +44,8 @@ A proof-of-concept Android application that uses OCR (Optical Character Recognit
 
 1. **Clone the repository**:
    ```bash
-git clone https://github.com/dyerelian/ocr-android-poc.git
-cd ocr-android-poc
+      git clone https://github.com/dyerelian/ocr-android-poc.git
+      cd ocr-android-poc
    ```
 
 2. **Open in Android Studio**:
