@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OCR POC</string>
+    <string name="permission_camera_required">Camera permission is required to take photos</string>
+    <string name="permission_storage_required">Storage permission is required to select images</string>
+    <string name="no_text_found">No text found in the image</string>
+    <string name="text_extracted">Text extracted successfully</string>
+    <string name="error_processing">Error processing image</string>
+    <string name="text_copied">Text copied to clipboard</string>
+</resources>

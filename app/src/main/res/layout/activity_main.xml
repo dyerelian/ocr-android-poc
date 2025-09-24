@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OCR Text Extractor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Image Display -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/darker_gray"
+            android:scaleType="centerCrop"
+            android:contentDescription="Selected image"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnTakePhoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Take Photo"
+                android:layout_marginEnd="8dp"
+                style="@style/Widget.Material3.Button" />
+
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select Image"
+                android:layout_marginStart="8dp"
+                style="@style/Widget.Material3.Button" />
+
+        </LinearLayout>
+
+        <!-- Process Button -->
+        <Button
+            android:id="@+id/btnProcessImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Extract Text"
+            android:enabled="false"
+            android:layout_marginBottom="24dp"
+            style="@style/Widget.Material3.Button" />
+
+        <!-- Loading Progress -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Extracted Text Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Extracted Text:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/textViewExtractedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No text extracted yet. Select an image and tap 'Extract Text'."
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+        <!-- Copy Button -->
+        <Button
+            android:id="@+id/btnCopyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Copy Text"
+            android:enabled="false"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
